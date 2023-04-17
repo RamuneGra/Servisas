@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+{% load static %}
+  <img src="{% static 'img/uzsakymai.png' %}" class="img-fluid">
+  <h1>{% trans "List of orders" %}</h1>
+  {% if uzsakymas_list %}
+  <ul>
+    {% for uzsakymas in uzsakymas_list %}
+      <li>
+        <a href="{{ uzsakymas.id }}">{{ uzsakymas.id }} | {{ uzsakymas.data }} >>> {{ uzsakymas.automobilis }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>{% trans "No orders available." %}</p>
+  {% endif %}
+  <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; {% trans "first" %}</a>
+            <a href="?page={{ page_obj.previous_page_number }}">{% trans "back" %}</a>
+        {% endif %}
+
+        <span class="current">
+            {{ page_obj.number }} iš {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">{% trans "forward" %}</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">{% trans "last" %} &raquo;</a>
+        {% endif %}
+    </span>
+  </div>
+{% endblock %}

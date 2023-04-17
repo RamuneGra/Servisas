@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+  <h1>{{ uzsakymas.id }} | {{ uzsakymas.data }}</h1>
+
+  <div style="margin-top:50px">
+    <img class="rounded-circle account-img" src="{{ uzsakymas.vartotojas.profilis.nuotrauka.url }}" height="100">
+    <p><strong>{% trans "User:" %}</strong> {{ uzsakymas.vartotojas }}</p>
+    <p><strong>{% trans "Vehicle:" %}</strong> {{ uzsakymas.automobilis }}</p>
+    <p><strong>{% trans "Order total:" %}</strong> {{ uzsakymas.suma }}</p>
+    <p><strong>{% trans "Status:" %}</strong> {{ uzsakymas.get_status_display }}</p>
+    <p><strong>{% trans "Deadline:" %}</strong> {{ uzsakymas.terminas }}</p>
+    {% if uzsakymas.vartotojas == user %}
+        <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'uzsakymas-redaguoti' uzsakymas.id %}">{% trans "Edit" %}</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'uzsakymas-istrinti' uzsakymas.id %}">{% trans "Delete" %}</a>
+        </div>
+    {% endif %}
+    <hr/>
+    </hr>
+    <p><strong>{% trans "Problem description:" %}</strong></p>
+    <p>{{ uzsakymas.aprasymas | safe }}</p>
+    <hr/>
+    </hr>
+  </div>
+  <div style="margin-left:20px;margin-top:20px">
+      <h4>{% trans "Order details:" %}</h4>
+  <table class="table table-dark table-sm">
+        <thead>
+            <tr>
+                <th>{% trans "Service" %}</th>
+                <th>{% trans "Quantity, pcs" %}</th>
+                <th>{% trans "Price, EUR" %}</th>
+                <th>{% trans "SUM, EUR" %}</th>
+                {% if uzsakymas.vartotojas == user %}
+                <th scope="col"></th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+        {% for eilute in uzsakymas.uzsakymo_eilutes.all %}
+            <tr>
+                <td>{{ eilute.paslauga.pavadinimas }}</td>
+                <td>{{ eilute.kiekis }}</td>
+                <td>{{ eilute.paslauga.paslaugos_kaina }}</td>
+                <td>{{ eilute.kaina }}</td>
+                {% if uzsakymas.vartotojas == user %}
+                <td scope="row">
+                    <div>
+                        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'uzsakymai_redaguotieilute' uzsakymas.id eilute.id %}">{% trans "Edit" %}</a>
+                        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'uzsakymai_istrintieilute' uzsakymas.id eilute.id %}">{% trans "Delete" %}</a>
+                    </div>
+        </td>
+        {% endif %}
+            </tr>
+        {% endfor%}
+        </tbody>
+    </table>
+    {% if uzsakymas.vartotojas == user %}
+        <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'uzsakymai_pridetieilute' uzsakymas.id %}">{% trans "Add line" %}</a>
+        </div>
+    {% endif %}
+  </div>
+</br>
+<hr style="height:5px;border-width:0;background-color:red">
+  <h4>{% trans "Comments:" %}</h4>
+  {% if uzsakymas.uzsakymuatsiliepimai_set.all %}
+    {% for atsiliepimas in uzsakymas.uzsakymuatsiliepimai_set.all %}
+      <hr style="width:50%">
+      <strong>{{ atsiliepimas.komentatorius }}</strong>, <em>{{ atsiliepimas.sukurimo_data}}</em>
+      <p>{{ atsiliepimas.atsiliepimas }}</p>
+    {% endfor %}
+  {% else %}
+    <p>{% trans "No Comments" %}</p>
+  {% endif %}
+
+  {% if user.is_authenticated %}
+      <div class="fieldWrapper">
+        <hr><br/>
+        <h4>{% trans "Leave a Comment:" %}</h4>
+        <form action="" method="post">
+          {% csrf_token %}
+          {{ form.atsiliepimas }}</br>
+          <input type="submit" value="{% blocktrans %} Save {% endblocktrans %}">
+        </form>
+      </div>
+  {% endif %}
+</hr>
+{% endblock %}

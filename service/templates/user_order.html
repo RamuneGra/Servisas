@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+{% load static %}
+<img src="{% static 'img/user_order.png' %}" class="img-fluid">
+<div style="margin-left:10px;margin-top:20px">
+    <h1>{% trans "My orders:" %}</h1>
+
+    {% if uzsakymas_list %}
+        <table class="table table-borderless" style="color:white">
+        <tbody>
+        {% for uzsakymas in uzsakymas_list %}
+            <tr>
+                <td><img class="rounded-circle" src="{{ user.profilis.nuotrauka.url }}" height="50"></td>
+                <td class="align-middle fs-4 ">
+                    <li class="{% if uzsakymas.ar_baigesi_terminas %}text-danger{% endif %}"> {{uzsakymas}} / {% trans "deadline" %} >>>> {{ uzsakymas.terminas }}
+                    <a class="btn btn-primary" href="{% url 'uzsakymas-detail' uzsakymas.pk %}" role="button">{% trans "View" %}</a>
+                        {% if uzsakymas.vartotojas == user %}
+                        <div>
+                        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'manouzsakymas-redaguoti' uzsakymas.id %}">{% trans "Edit" %}</a>
+                        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'manouzsakymas-istrinti' uzsakymas.id %}">{% trans "Delete" %}</a>
+                        </div>
+                        {% endif %}
+                    </li>
+                </td>
+            </tr>
+        {% endfor%}
+        </tbody>
+    </table>
+
+
+    {% else %}
+      <p>{% trans "No orders available." %}</p>
+    {% endif %}
+</div>
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; {% trans "first" %}</a>
+            <a href="?page={{ page_obj.previous_page_number }}">{% trans "back" %}</a>
+        {% endif %}
+
+        <span class="current">
+            {{ page_obj.number }} iš {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">{% trans "forward" %}</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">{% trans "last" %} &raquo;</a>
+        {% endif %}
+    </span>
+  </div>
+{% endblock %}

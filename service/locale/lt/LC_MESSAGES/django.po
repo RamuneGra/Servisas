@@ -1,0 +1,599 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-21 15:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
+"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
+"1 : n % 1 != 0 ? 2: 3);\n"
+
+#: .\admin.py:19 .\admin.py:35
+#, fuzzy
+#| msgid "Vehicles"
+msgid "Vehicle details"
+msgstr "Automobiliai"
+
+#: .\admin.py:20 .\models.py:39
+msgid "Customer"
+msgstr "Klientas"
+
+#: .\admin.py:34
+#, fuzzy
+#| msgid "Order details:"
+msgid "Order details"
+msgstr "Užsakymo informacija:"
+
+#: .\admin.py:42 .\models.py:99 .\models.py:106 .\models.py:126
+msgid "Order"
+msgstr "Užsakymas"
+
+#: .\admin.py:43
+msgid "Information"
+msgstr "Informacija"
+
+#: .\models.py:10
+msgid "Make"
+msgstr "Markė"
+
+#: .\models.py:11
+msgid "Model"
+msgstr "Modelis"
+
+#: .\models.py:12
+msgid "Year"
+msgstr "Metai"
+
+#: .\models.py:13
+msgid "Engine"
+msgstr "Variklis"
+
+#: .\models.py:19
+msgid "Car model"
+msgstr "Automobilio modelis"
+
+#: .\models.py:20
+msgid "Car models"
+msgstr "Automobilio modeliai"
+
+#: .\models.py:24
+#, fuzzy
+#| msgid "Name"
+msgid "cdName"
+msgstr "Pavadinimas"
+
+#: .\models.py:24
+msgid "Enter the name of the service (eg oil change)"
+msgstr "Įveskite paslaugos pavadinimą (pvz. Alyvos keitimas)"
+
+#: .\models.py:25
+msgid "Price"
+msgstr "Kaina"
+
+#: .\models.py:25
+msgid "Enter the price of the service"
+msgstr "Įveskite paslaugos kainą"
+
+#: .\models.py:31 .\models.py:105 .\templates\uzsakymas_detail.html:31
+msgid "Service"
+msgstr "Paslauga"
+
+#: .\models.py:32 .\templates\base.html:21 .\templates\paslaugos.html:6
+msgid "Services"
+msgstr "Paslaugos"
+
+#: .\models.py:36
+msgid "License Plate"
+msgstr "Valstybinis Nr."
+
+#: .\models.py:38
+msgid "VIN code"
+msgstr "VIN kodas"
+
+#: .\models.py:40 .\models.py:139
+msgid "Photo"
+msgstr "Nuotrauka"
+
+#: .\models.py:41
+msgid "Description"
+msgstr "Aprašymas"
+
+#: .\models.py:47 .\models.py:53
+msgid "Vehicle"
+msgstr "Automobilis"
+
+#: .\models.py:48 .\templates\automobiliai.html:4 .\templates\base.html:20
+msgid "Vehicles"
+msgstr "Automobiliai"
+
+#: .\models.py:52
+msgid "Date"
+msgstr "Užsakymo data"
+
+#: .\models.py:55
+msgid "Description of the problem"
+msgstr "Problemos aprašymas"
+
+#: .\models.py:56 .\models.py:138
+msgid "User"
+msgstr "Vartotojas"
+
+#: .\models.py:57
+msgid "Deadline"
+msgstr "Terminas"
+
+#: .\models.py:73
+msgid "Confirmed"
+msgstr "Patvirtintas"
+
+#: .\models.py:74
+msgid "In Progress"
+msgstr "Vykdomas"
+
+#: .\models.py:75
+msgid "Done"
+msgstr "Įvykdytas"
+
+#: .\models.py:76
+msgid "Canceled"
+msgstr "Atmestas"
+
+#: .\models.py:84
+msgid "Status"
+msgstr "Statusas"
+
+#: .\models.py:100 .\templates\base.html:22
+msgid "Orders"
+msgstr "Užsakymai"
+
+#: .\models.py:107
+msgid "Quantity"
+msgstr "Kiekis"
+
+#: .\models.py:121
+msgid "Orderline"
+msgstr "Užsakymo eilutė"
+
+#: .\models.py:122
+msgid "Orderlines"
+msgstr "Užsakymo eilutės"
+
+#: .\models.py:127
+msgid "Commentator"
+msgstr "Komentatorius"
+
+#: .\models.py:129 .\models.py:132
+msgid "Comment"
+msgstr "Atsiliepimas"
+
+#: .\models.py:133
+msgid "Comments"
+msgstr "Atsiliepimas"
+
+#: .\models.py:145
+msgid "Profile"
+msgstr "Profilis"
+
+#: .\models.py:146
+msgid "Profiles"
+msgstr "Profiliai"
+
+#: .\templates\automobiliai.html:18 .\templates\automobilis.html:14
+msgid "License Plate:"
+msgstr "Valstybinis Nr."
+
+#: .\templates\automobiliai.html:18
+msgid "customer:"
+msgstr "klientas"
+
+#: .\templates\automobiliai.html:25
+msgid "No vehicles."
+msgstr "Automobilių nėra."
+
+#: .\templates\automobilis.html:17
+msgid "Customer:"
+msgstr "Savininkas:"
+
+#: .\templates\automobilis.html:18 .\templates\uzsakymas_detail.html:9
+msgid "Vehicle:"
+msgstr "Automobilio informacija:"
+
+#: .\templates\automobilis.html:19
+msgid "VIN code:"
+msgstr "VIN kodas:"
+
+#: .\templates\automobilis.html:22
+msgid "Description:"
+msgstr "Informacija:"
+
+#: .\templates\base.html:5 .\templates\index.html:7
+msgid "Autoservice"
+msgstr "Autoservisas"
+
+#: .\templates\base.html:29
+msgid "My orders"
+msgstr "Mano Užsakymai"
+
+#: .\templates\base.html:30
+msgid "New order"
+msgstr "Naujas užsakymas"
+
+#: .\templates\base.html:31
+msgid "Logout"
+msgstr "Atsijungti"
+
+#: .\templates\base.html:33
+msgid "Login"
+msgstr "Prisijungti"
+
+#: .\templates\base.html:34 .\templates\register.html:28
+msgid "Register"
+msgstr "Registruotis"
+
+#: .\templates\base.html:53
+msgid " Search "
+msgstr "Paieška"
+
+#: .\templates\index.html:9
+msgid "My Autoservice statistics:"
+msgstr "Mano autoserviso statistika:"
+
+#: .\templates\index.html:11
+msgid "Services:"
+msgstr "Paslaugos: "
+
+#: .\templates\index.html:12
+msgid "Orders done:"
+msgstr "Įvykdyti užsakymai: "
+
+#: .\templates\index.html:13
+msgid "Registered Vehicles:"
+msgstr "Registruoti automobiliai: "
+
+#: .\templates\index.html:14
+msgid "Visits:"
+msgstr "Apsilankymai: "
+
+#: .\templates\order_delete.html:9 .\templates\user_order_delete.html:9
+msgid "Delete order"
+msgstr "Ištrinti užsakymą"
+
+#: .\templates\order_delete.html:10 .\templates\user_order_delete.html:10
+msgid "Are you sure want to delete the order"
+msgstr "Ar tikrai norite ištrinti užsakymą"
+
+#: .\templates\order_delete.html:13 .\templates\user_order_delete.html:13
+#: .\templates\uzsakymoeilute_delete.html:13
+msgid "Yes, delete"
+msgstr "Taip, ištrinti"
+
+#: .\templates\order_delete.html:14 .\templates\user_order_delete.html:14
+#: .\templates\uzsakymoeilute_delete.html:14
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: .\templates\paslaugos.html:7
+msgid "List of our services:"
+msgstr "Mūsų paslaugų sąrašas:"
+
+#: .\templates\paslaugos.html:9
+msgid "price:"
+msgstr "kaina:"
+
+#: .\templates\profilis.html:23
+msgid "Profile Info"
+msgstr "Profilio info"
+
+#: .\templates\profilis.html:28
+msgid "Update"
+msgstr "Atnaujinti"
+
+#: .\templates\register.html:6
+msgid "Registration"
+msgstr "Registracija"
+
+#: .\templates\register.html:10
+msgid "User name"
+msgstr "Vartotojo vardas"
+
+#: .\templates\register.html:12
+msgid "Up to 150 characters."
+msgstr "Iki 150 simbolių."
+
+#: .\templates\register.html:15
+msgid "E-mail"
+msgstr "El. paštas"
+
+#: .\templates\register.html:17
+msgid "Required to send a new password."
+msgstr "Reikalingas naujam slaptažodžiui išsiųsti."
+
+#: .\templates\register.html:20
+msgid "Password"
+msgstr "Slaptažodis"
+
+#: .\templates\register.html:22
+msgid "At least 8 characters. It can't just be numbers."
+msgstr "Ne mažiau, kaip 8 simboliai. Negali būti vien tik skaičiai"
+
+#: .\templates\register.html:25
+#: .\templates\registration\password_reset_confirm.html:17
+msgid "Repeat the password"
+msgstr "Pakartoti slaptažodį"
+
+#: .\templates\register.html:30
+msgid "If you have registered before,"
+msgstr "Jeigu užsiregistravote anksčiau,"
+
+#: .\templates\register.html:30
+msgid "sign in."
+msgstr "prisijunkite."
+
+#: .\templates\registration\logged_out.html:5
+msgid "You successfully logged out!"
+msgstr "Jūs sėkmingai atsijungėte!"
+
+#: .\templates\registration\logged_out.html:6
+#: .\templates\registration\password_reset_complete.html:6
+msgid "Sign In again"
+msgstr "Prisijungti iš naujo."
+
+#: .\templates\registration\login.html:7
+msgid "Error, please try again!"
+msgstr "Prisijungimo klaida, bandykite dar kartą!"
+
+#: .\templates\registration\login.html:12
+msgid "You do not have access to this information. You must sign in."
+msgstr "Neturite prieigos prie šios informacijos. Turite prisijungti."
+
+#: .\templates\registration\login.html:20 .\templates\uzsakymas_detail.html:8
+msgid "User:"
+msgstr "Vartotojas:"
+
+#: .\templates\registration\login.html:24
+msgid "Password:"
+msgstr "Slaptažodis:"
+
+#: .\templates\registration\login.html:28
+msgid "Sign In"
+msgstr "Prisijungti"
+
+#: .\templates\registration\login.html:32
+msgid "Forgotten password?"
+msgstr "Pamiršote slaptažodį?"
+
+#: .\templates\registration\password_reset_complete.html:5
+msgid "Password changed!"
+msgstr "Slaptažodis pakeistas!"
+
+#: .\templates\registration\password_reset_confirm.html:6
+msgid "Enter a new password:"
+msgstr "Įveskite naują slaptažodį:"
+
+#: .\templates\registration\password_reset_confirm.html:12
+msgid "New password"
+msgstr "Naujas slaptažodis"
+
+#: .\templates\registration\password_reset_confirm.html:22
+msgid "CONFIRM"
+msgstr "PATVIRTINTI"
+
+#: .\templates\registration\password_reset_confirm.html:27
+msgid "Failed to change password"
+msgstr "Nepavyko pakeisti slaptažodžio"
+
+#: .\templates\registration\password_reset_confirm.html:28
+msgid "The password change link is invalid. Start a password reset."
+msgstr ""
+"Slaptažodžio pakeitimo nuoroda negaliojanti. Prašome inicijuoti slaptažodžio "
+"keitimą iš naujo."
+
+#: .\templates\registration\password_reset_done.html:5
+msgid "We've emailed you a password reset link!"
+msgstr "Slaptažodžio pakeitimo nuorodą išsiuntėme jums el.paštu!"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid ""
+"\n"
+"Hello,\n"
+"\n"
+"We have received your request to reset the connection data to the VIP "
+"autoservice.\n"
+"\n"
+"Please note that this action will change your previous password.\n"
+"\n"
+"To change your existing password to a new one, please click on the link "
+"below:\n"
+msgstr ""
+"\n"
+"Sveiki,\n"
+"\n"
+"Gavome Jūsų prašymą atstatyti prisijungimo prie VIP autoserviso duomenis.\n"
+"\n"
+"Atkreipkite dėmesį, kad šis veiksmas pakeis Jūsų iki šiol buvusį "
+"slaptažodį.\n"
+"\n"
+"Norėdami pakeisti esamą slaptažodį nauju, prašome paspausti žemiau esančią "
+"nuorodą:\n"
+
+#: .\templates\registration\password_reset_email.html:13
+msgid ""
+"\n"
+"Thank you for choosing VIP autoservice!\n"
+msgstr ""
+"\n"
+"Dėkojame, kad pasirinkote VIP autoservisą!\n"
+
+#: .\templates\registration\password_reset_form.html:5
+msgid "FORGOTTEN PASSWORD?"
+msgstr "PAMIRŠOTE SLAPTAŽODĮ?"
+
+#: .\templates\registration\password_reset_form.html:8
+msgid "Email Address"
+msgstr "Įveskite savo el. pašto adresą:"
+
+#: .\templates\registration\password_reset_form.html:16
+msgid "Reset password"
+msgstr "Atstatyti slaptažodį"
+
+#: .\templates\search.html:4
+#, python-format
+msgid "Query \"%(query)s\" results:"
+msgstr "Paieškos pagal \"%(query)s\" rezultatai:"
+
+#: .\templates\search.html:15
+msgid "Oops. No results"
+msgstr "Oops. Nieko neradome"
+
+#: .\templates\user_order.html:7
+msgid "My orders:"
+msgstr "Mano užsakymai"
+
+#: .\templates\user_order.html:16
+msgid "deadline"
+msgstr "terminas"
+
+#: .\templates\user_order.html:17
+msgid "View"
+msgstr "Peržiūrėti"
+
+#: .\templates\user_order.html:20 .\templates\uzsakymas_detail.html:15
+#: .\templates\uzsakymas_detail.html:50
+msgid "Edit"
+msgstr "Redaguoti"
+
+#: .\templates\user_order.html:21 .\templates\uzsakymas_detail.html:16
+#: .\templates\uzsakymas_detail.html:51
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: .\templates\user_order.html:33 .\templates\uzsakymas_list.html:16
+msgid "No orders available."
+msgstr "Nėra užsakymų."
+
+#: .\templates\user_order.html:39 .\templates\uzsakymas_list.html:21
+msgid "first"
+msgstr "pirmas"
+
+#: .\templates\user_order.html:40 .\templates\uzsakymas_list.html:22
+msgid "back"
+msgstr "atgal"
+
+#: .\templates\user_order.html:48 .\templates\uzsakymas_list.html:30
+msgid "forward"
+msgstr "pirmyn"
+
+#: .\templates\user_order.html:49 .\templates\uzsakymas_list.html:31
+msgid "last"
+msgstr "paskutinis"
+
+#: .\templates\user_order_form.html:9
+msgid "New order/Edit"
+msgstr "Naujas užsakymas/Redaguoti"
+
+#: .\templates\user_order_form.html:13 .\templates\uzsakymoeilute_form.html:13
+msgid "Save"
+msgstr "Išsaugoti"
+
+#: .\templates\uzsakymas_detail.html:10
+msgid "Order total:"
+msgstr "Užsakymo suma:"
+
+#: .\templates\uzsakymas_detail.html:11
+msgid "Status:"
+msgstr "Užsakymo statusas:"
+
+#: .\templates\uzsakymas_detail.html:12
+msgid "Deadline:"
+msgstr "Terminas:"
+
+#: .\templates\uzsakymas_detail.html:21
+msgid "Problem description:"
+msgstr "Problemos aprašymas:"
+
+#: .\templates\uzsakymas_detail.html:27
+msgid "Order details:"
+msgstr "Užsakymo informacija:"
+
+#: .\templates\uzsakymas_detail.html:32
+msgid "Quantity, pcs"
+msgstr "Kiekis, vnt"
+
+#: .\templates\uzsakymas_detail.html:33
+msgid "Price, EUR"
+msgstr "Kaina, Eur"
+
+#: .\templates\uzsakymas_detail.html:34
+msgid "SUM, EUR"
+msgstr "Suma, Eur"
+
+#: .\templates\uzsakymas_detail.html:61
+msgid "Add line"
+msgstr "Pridėti eilutę"
+
+#: .\templates\uzsakymas_detail.html:67
+msgid "Comments:"
+msgstr "Atsiliepimai:"
+
+#: .\templates\uzsakymas_detail.html:75
+msgid "No Comments"
+msgstr "Nėra atsiliepimų"
+
+#: .\templates\uzsakymas_detail.html:81
+msgid "Leave a Comment:"
+msgstr "Palikite atsiliepimą:"
+
+#: .\templates\uzsakymas_detail.html:85
+msgid " Save "
+msgstr "Išsaugoti"
+
+#: .\templates\uzsakymas_list.html:6
+msgid "List of orders"
+msgstr "Užsakymų sąrašas"
+
+#: .\templates\uzsakymoeilute_delete.html:9
+msgid "Delete order line"
+msgstr "Ištrinti užsakymo eilutę"
+
+#: .\templates\uzsakymoeilute_delete.html:10
+msgid "Are you sure want to delete the order line"
+msgstr "Ar tikrai norite ištrinti užsakymo eilutę"
+
+#: .\templates\uzsakymoeilute_form.html:9
+msgid "New order line/Edit"
+msgstr "Nauja užsakymo eilutė/redagavimas"
+
+#: .\views.py:124
+#, python-format
+msgid "Username %s already exists!"
+msgstr "Vartotojo vardas %s užimtas!"
+
+#: .\views.py:129
+#, python-format
+msgid "Email %s already exists!"
+msgstr "Vartotojas su el. paštu %s jau užregistruotas!"
+
+#: .\views.py:134
+#, python-format
+msgid "Username %s is registered!"
+msgstr "Vartotojas %s užregistruotas!"
+
+#: .\views.py:137
+msgid "Passwords do not match!"
+msgstr "Slaptažodžiai nesutampa!"
+
+#: .\views.py:150
+msgid "Profile updated"
+msgstr "Profilis atnaujintas"

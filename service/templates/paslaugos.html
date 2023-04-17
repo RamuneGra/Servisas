@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+{% load static %}
+  <img src="{% static 'img/paslaugos.png' %}" class="img-fluid">
+  <h1>{% trans "Services" %}</h1>
+  <p>{% trans "List of our services:" %}</p>
+  {% for paslauga in paslaugos %}
+    <li><strong>{{paslauga.pavadinimas}}</strong>, {% trans "price:" %} {{paslauga.paslaugos_kaina}} Eur</li>
+    {% endfor %}
+  <div class="container puslapiai">
+      <nav aria-label="...">
+          {% if paslaugos.has_other_pages %}
+              <ul class="pagination pagination-sm justify-content">
+                  {% for i in paslaugos.paginator.page_range %}
+                      {% if paslaugos.number == i %}
+                          <li class="page-item active">
+                              <a class="page-link">{{ i }}</a>
+                          </li>
+                      {% else %}
+                          <li class="page-item">
+                              <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                          </li>
+                      {% endif %}
+                  {% endfor %}
+              </ul>
+          {% endif %}
+      </nav>
+  </div>
+{% endblock %}

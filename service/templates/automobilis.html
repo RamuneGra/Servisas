@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div style="margin-left:10px;margin-top:20px">
+    {% load static %}
+    <div class="col-md-4 d-flex align-items-stretch">
+        {% if automobilis.cover %}
+        <img src="{{ automobilis.cover.url }}" class="card-img-top" alt="...">
+        {% else %}
+        <img src="{% static 'img/cover.jpg' %}" class="card-img-top">
+        {% endif %}
+    </div>
+    <div style="margin-left:10px;margin-top:20px">
+        <h3>{% trans "License Plate:" %} {{ automobilis.valstybinis_nr }}</h3>
+    </div>
+    <hr/>
+    <p><strong>{% trans "Customer:" %}</strong> {{ automobilis.klientas }}</p>
+    <p><strong>{% trans "Vehicle:" %}</strong> {{ automobilis.automobilio_modelis }}</p>
+    <p><strong>{% trans "VIN code:" %}</strong> {{ automobilis.vin_kodas }}</p>
+    </hr>
+    <hr/>
+    <p><strong>{% trans "Description:" %}</strong> {{ automobilis.aprasymas | safe }}</p>
+    </hr>
+
+</div>
+{% endblock %}

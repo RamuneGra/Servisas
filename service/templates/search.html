@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+  <h1>{% blocktrans %}Query "{{query}}" results:{% endblocktrans %}</h1>
+  </br>
+  {% if automobiliai %}
+  <ul>
+    {% for automobilis in automobiliai %}
+      <li>
+        <a href="{% url 'automobilis' automobilis.id %}">{{ automobilis.automobilio_modelis }}</a> (užsakovas: {{automobilis.klientas}}, valstybinis Nr. {{automobilis.valstybinis_nr}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>{% trans "Oops. No results" %}</p>
+  {% endif %}
+
+  {% endblock %}

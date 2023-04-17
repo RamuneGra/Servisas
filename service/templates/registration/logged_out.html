@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div style="margin-left:10px;margin-top:20px">
+  <p>{% trans "You successfully logged out!" %}</p>
+  <a href="{% url 'login'%}">{% trans "Sign In again" %}</a>
+</div>
+{% endblock %}

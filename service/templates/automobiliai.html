@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<h1>{% trans "Vehicles" %}</h1>
+    {% load static %}
+        {% if automobiliai %}
+        <div class="row">
+            {% for automobilis in automobiliai %}
+                <div class="col-md-3 d-flex align-items-stretch text-center">
+                    <div class="card mb-3 shadow-sm">
+                        {% if automobilis.cover %}
+                        <img src="{{ automobilis.cover.url }}" class="card-img-top h-100" alt="...">
+                        {% else %}
+                        <img src="{% static 'img/cover.jpg' %}" class="card-img-top h-100">
+                        {% endif %}
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">{{ automobilis.automobilio_modelis }}</h6>
+                            <p class="card-text"><a href="{{ automobilis.id }}">{% trans "License Plate:" %} {{ automobilis.valstybinis_nr }} | {% trans "customer:" %} {{ automobilis.klientas }}</a></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% else %}
+            <p>{% trans "No vehicles." %}</p>
+        {% endif %}
+  <div class="container puslapiai">
+      <nav aria-label="...">
+          {% if automobiliai.has_other_pages %}
+              <ul class="pagination pagination-sm justify-content-center">
+                  {% for i in automobiliai.paginator.page_range %}
+                      {% if automobiliai.number == i %}
+                          <li class="page-item active">
+                              <a class="page-link">{{ i }}</a>
+                          </li>
+                      {% else %}
+                          <li class="page-item">
+                              <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                          </li>
+                      {% endif %}
+                  {% endfor %}
+              </ul>
+          {% endif %}
+      </nav>
+  </div>
+{% endblock %}
+
+

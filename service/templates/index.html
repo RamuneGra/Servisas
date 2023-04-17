@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+{% load static %}
+  <img src="{% static 'img/auto.png' %}" class="img-fluid">
+<div style="margin-left:100px;margin-top:20px">
+  <h1>VIP {% trans "Autoservice" %}</h1>
+  <div style="margin-left:70px;margin-top:60px">
+    <h5>{% trans "My Autoservice statistics:" %}</h5>
+  <ul>
+    <li><strong>{% trans "Services:" %}</strong> {{ num_paslaugos }}</li>
+    <li><strong>{% trans "Orders done:" %}</strong> {{ num_uzsakymai }}</li>
+    <li><strong>{% trans "Registered Vehicles:" %}</strong> {{ num_auto }}</li>
+    <li><strong>{% trans "Visits:" %}</strong> {{ num_visits }}</li>
+  </ul>
+  </div>
+</div>
+{% endblock %}
